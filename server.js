@@ -10,7 +10,7 @@ server.listen(8080);
 
 // Отслеживание url адреса и отображение нужной HTML страницы
 app.get("/", function (request, respons) {
-    respons.sendFile(__dirname + "/public/html/index.html");
+    respons.sendFile(__dirname + "/public/index.html");
 });
 
 // Массив со всеми подключениями
