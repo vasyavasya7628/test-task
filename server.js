@@ -6,11 +6,11 @@ var io = require("socket.io").listen(server);
 var path = require("path");
 app.use(express.static(path.join(__dirname, "public")));
 // Отслеживание порта
-server.listen(3000);
+server.listen(8080);
 
 // Отслеживание url адреса и отображение нужной HTML страницы
 app.get("/", function (request, respons) {
-    respons.sendFile(__dirname + "/index.html");
+    respons.sendFile(__dirname + "/public/html/index.html");
 });
 
 // Массив со всеми подключениями
