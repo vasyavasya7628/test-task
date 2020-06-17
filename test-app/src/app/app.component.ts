@@ -40,13 +40,20 @@ export class AppComponent {
     addItem(id: number, firstName: string, lastName: string): void {
 
         if (id == null || firstName.trim() == "" || lastName.trim() == "") { return; }
-
+        //условный оператор не выполняет требования
         for (var i = 0; i < this.test.length; i++) {
             if (id == this.test[i].id) {
 
                 break;
-            } else { this.test.push(new Worker(id, firstName, lastName)); break }
+            } else if (id != this.test[i].id) {
+                this.test.push(new Worker(id, firstName, lastName));
+                break;
+            } else { return; }
         }
+        return;
+    }
+
+    checkValidation(id: number, firstName: string, lastName: string) {
 
     }
 }
