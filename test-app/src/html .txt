@@ -63,7 +63,14 @@ template: `<div class="page-header">
                     return;
 
 
-                } else { return alert("Deleted") }
+                }
+            }
+            
+              for (var i = 0; i < this.arr.length; i++) {
+                if (id != this.arr[i].id) {
+                    this.arr.push(new Worker(id, firstName, lastName));
+                    return;
+                }
             }
             
             
