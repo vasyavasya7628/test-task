@@ -27,8 +27,8 @@ export class AppComponent {
     lastName: string;
     title = "Компетенции"
     appTitle = "Компетенции";
-    imgEditUrl = "assets/edit.ico"
-    imgDeleteUrl = "assets/delete.ico"
+
+
 
 
     //var as todo array elements
