@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { element } from 'protractor';
+import { worker } from 'cluster';
 
 
 class Worker {
@@ -42,21 +44,13 @@ export class AppComponent {
 
     addItem(id: number, firstName: string, lastName: string): void {
         //var a = this.test.push(new Worker(id, firstName, lastName));
+        if (id == null || firstName.trim() == "" || lastName.trim() == "") return;
+        for (let item of this.test) {
+            if (this.test.some(item => item.id == id)) {
+                return;
+            } else { }
 
-        if (id == null || firstName.trim() == "" || lastName.trim() == "") {
-
-            for (var i = 0; i < this.test.length; i++) {
-                if (id != this.test[i].id) {
-
-                    var a = this.test.push(new Worker(id, firstName, lastName));
-                }
-            }
         }
-
-    }
-
-    checkValidation(id: number, firstName: string, lastName: string) {
-
+        this.test.push(new Worker(id, firstName, lastName));
     }
 }
-
