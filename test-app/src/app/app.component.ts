@@ -30,21 +30,23 @@ export class AppComponent {
 
     //var as todo array elements
     test: Worker[] = [
+        { id: 0, firstName: 'Vasya', lastName: 'Bell' },
         { id: 1, firstName: 'Vasya', lastName: 'Bell' },
         { id: 2, firstName: 'Vasya', lastName: 'Bell' },
-        { id: 3, firstName: 'Vasya', lastName: 'Bell' },
-        { id: 4, firstName: 'Vasya', lastName: 'Bell' }
+        { id: 3, firstName: 'Vasya', lastName: 'Bell' }
 
     ]
 
     addItem(id: number, firstName: string, lastName: string): void {
 
-        if (id == null || firstName.trim() == "" || lastName.trim() == "")
-            return;
-        this.test.push(new Worker(id, firstName, lastName));
+        if (id == null || firstName.trim() == "" || lastName.trim() == "") { return; }
 
+        for (var i = 0; i < this.test.length; i++) {
+            if (id == this.test[i].id) {
+
+                break;
+            } else { this.test.push(new Worker(id, firstName, lastName)); break }
+        }
 
     }
 }
-
-

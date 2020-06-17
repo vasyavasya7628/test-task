@@ -49,3 +49,62 @@ template: `<div class="page-header">
         </table>
        
     </div>`
+    
+    
+    
+    
+    
+    JAVAJAVAJAVJAJAJAJAJAJAJAJAJAJAJAJAJ
+    
+    
+     for (var i = 0; i < this.test.length; i++) {
+                if (id != this.test[i].id) {
+                    this.test.push(new Worker(id, firstName, lastName));
+                    return;
+
+
+                } else { return alert("Deleted") }
+            }
+            
+            
+            
+            
+            
+            
+            test: Worker[] = [
+        { id: 0, firstName: 'Vasya', lastName: 'Bell' },
+        { id: 1, firstName: 'Vasya', lastName: 'Bell' },
+        { id: 2, firstName: 'Vasya', lastName: 'Bell' },
+        { id: 3, firstName: 'Vasya', lastName: 'Bell' }
+
+    ]
+    
+    
+    
+    
+    
+    
+    
+     for (var i = 0; i < this.test.length; i++) {
+            if (id == this.test[i].id) {
+                this.test.push(new Worker(id, firstName, lastName));
+                return;
+            } //else { this.test.push(new Worker(id, firstName, lastName)); }
+        }
+        
+        
+        
+        var i: number = 0;
+        while (i < this.test.length) {
+            if (id != this.test[i].id) {
+                this.test.push(new Worker(id, firstName, lastName));
+                return;
+                i++;
+                break;
+
+            } else {
+                return alert("Deleted");
+                break;
+            }
+            i++;
+        }
