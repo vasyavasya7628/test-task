@@ -27,6 +27,9 @@ export class AppComponent {
     lastName: string;
     title = "Компетенции"
     appTitle = "Компетенции";
+    imgEditUrl = "assets/edit.ico"
+    imgDeleteUrl = "assets/delete.ico"
+
 
     //var as todo array elements
     test: Worker[] = [
@@ -38,22 +41,22 @@ export class AppComponent {
     ]
 
     addItem(id: number, firstName: string, lastName: string): void {
+        //var a = this.test.push(new Worker(id, firstName, lastName));
 
-        if (id == null || firstName.trim() == "" || lastName.trim() == "") { return; }
-        //условный оператор не выполняет требования
-        for (var i = 0; i < this.test.length; i++) {
-            if (id == this.test[i].id) {
+        if (id == null || firstName.trim() == "" || lastName.trim() == "") {
 
-                break;
-            } else if (id != this.test[i].id) {
-                this.test.push(new Worker(id, firstName, lastName));
-                break;
-            } else { return; }
+            for (var i = 0; i < this.test.length; i++) {
+                if (id != this.test[i].id) {
+
+                    var a = this.test.push(new Worker(id, firstName, lastName));
+                }
+            }
         }
-        return;
+
     }
 
     checkValidation(id: number, firstName: string, lastName: string) {
 
     }
 }
+

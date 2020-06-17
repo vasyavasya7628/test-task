@@ -108,3 +108,23 @@ template: `<div class="page-header">
             }
             i++;
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         //условный оператор не выполняет требования
+        for (var i = 0; i < this.test.length; i++) {
+            if (id == this.test[i].id) {
+
+                break;
+            } else if (id != this.test[i].id) {
+                this.test.push(new Worker(id, firstName, lastName));
+                break;
+            } else { return; }
+        }
+        return;
